@@ -1,0 +1,164 @@
+@font-face {
+    font-family: "Cantarell";
+    src: url('./Cantarell-VF.woff2') format('woff2');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden !important;
+    font-family: 'Cantarell', sans-serif;
+    margin: 0;
+    padding: 0;
+    cursor: url(qogir-cursor_000.png), auto;
+}
+
+img {
+    display: block;
+}
+
+svg {
+    filter: drop-shadow(0px 0 20px #000);
+}
+
+*::selection {
+    background: transparent;
+}
+
+.error {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background-image: url(./wallpapersden.com_cool-red-mountains-4k_4000x2250.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+}
+
+.terminal-box {
+    position: absolute;
+    top: 35px;
+    left: 13px;
+    background: rgba(0, 0, 0, 0.425);
+    color: #fff;
+    padding: 0 1em;
+    border-radius: 3px;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bar {
+    background-color: rgba(0, 0, 0, 0.300);
+    width: auto;
+    margin: 5px 13px;
+    border-radius: 6px;
+    color: #fff;
+    padding: 3px;
+}
+
+.menubar {
+    font-weight: 700;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menubar-item {
+    border-radius: 10px;
+    transition: ease .1s;
+    width: fit-content;
+    padding: 0 20px;
+    cursor: default;
+}
+
+.menubar-item:nth-child(1){
+    border-radius: 5px;
+}
+
+.menubar-item:nth-child(3){
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-right: 10px;
+}
+
+.menubar-item:hover {
+    background-color: rgba(255, 255, 255, 0.24);
+}
+
+.menubar-item-text {
+    padding-top: 1px;
+    text-shadow: 0px 0 20px #000;
+}
+
+.dock {
+    background: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7px;
+    display: flex;
+}
+
+.dock * {
+    cursor: default;
+}
+
+.dock-item {
+    margin: 2px;
+    padding: 10px;
+    border-radius: 17px;
+    transition: ease .1s;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 30px;
+    margin: auto 5px;
+    background-color: rgba(126, 126, 126, 0.658);
+}
+
+.dock-item:hover {
+    background-color: rgba(255, 255, 255, 0.116);
+}
+
+.dock-item:active {
+    background-color: rgba(255, 255, 255, 0.185);
+}
+
+@media screen and (max-width: 1000px) {
+    .error {
+        display: block;
+    }
+    .background {
+        display: none;
+    }
+}
