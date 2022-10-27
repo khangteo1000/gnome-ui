@@ -43,20 +43,6 @@ svg {
     background: transparent;
 }
 
-.error {
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    color: #fff;
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-}
-
 .background {
     width: 100%;
     height: 100%;
@@ -70,7 +56,6 @@ svg {
     right: 0;
     bottom: 0;
     left: 0;
-    display: block;
 }
 
 .terminal-window {
@@ -266,6 +251,14 @@ svg {
     background-color: rgba(126, 126, 126, 0.658);
 }
 
+.dock .vertical-line {
+    display: block;
+}
+
+.dock .horizontial-line {
+    display: none;
+}
+
 .dock-item:hover {
     background-color: rgba(255, 255, 255, 0.116);
 }
@@ -318,14 +311,51 @@ svg {
       background: #ff0000;
       box-shadow: -130px 0 0 130px #ff0000;
     }
-
 }
 
 @media screen and (max-width: 1000px) {
-    .error {
+    pre {
+        font-size: 1.95vw;
+    }
+    .dock {
+        margin-left: 0;
+        margin-right: auto;
+        flex-direction: column;
+        overflow-y: auto;
+        display: none;
+    }
+
+    .terminal-window {
+        position: absolute;
+        top: 28px;
+        left: 0;
+        background-color: #25273a7c;
+        border: 1px solid #12131d2f;
+        border-radius: 0px;
+        width: 100%;
+        height: 527px;
+    }
+
+    .terminal-box {
+        background: rgba(0, 0, 0, 0.425);
+        color: #fff;
+        padding: 0 1em;
+        border-radius: 3px;
+        margin: 2px;
+        height: 483px;
+    }
+
+    .bar {
+        margin: 0;
+        border-radius: 0px;
+        padding: 5px;
+    }
+
+    .dock .horizontial-line {
         display: block;
     }
-    .background {
+
+    .dock .vertical-line {
         display: none;
     }
 }

@@ -8,9 +8,6 @@
     <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 <body>
-    <div class="error">
-        <p>Sorry, this website is not suitable for mobile. Please watch it on computers!</p>
-    </div>
     <div class="background">
         <div id="window" class="terminal-window">
             <div class="terminal-titlebar">
@@ -20,7 +17,7 @@
                         <path d="m2 2c-1.108 0-2 0.892-2 2v8c0 1.108 0.892 2 2 2h11c1.108 0 2-0.892 2-2v-8c0-1.108-0.892-2-2-2h-11zm0 2h11c0.554 0 1 0.446 1 1v7c0 0.554-0.446 1-1 1h-11c-0.554 0-1-0.446-1-1v-7c0-0.554 0.446-1 1-1z" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1622"/>
                     </svg>
                 </div>
-                <p style="margin-left: 90px;">khangteo@khangteopc:~</p>
+                <p style="margin-left: 8vw;">khangteo@khangteopc:~</p>
                 <div style="display: flex;">
                     <div class="terminal-button" style="margin-right: 3px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -82,7 +79,7 @@ to do with this project, feel free to fork the repo!
                     <div class="menubar-item">
                         <img width="18px" height="18px" src="./menu.svg">
                     </div>
-                    <div class="menubar-item" style="margin-left: 85px;">
+                    <div class="menubar-item" style="margin-left: 5.5vw;">
                         <div style="padding-top: 1px;">
                             <span class="menubar-item-text" style="margin-right: 10px;">Jan 1</span>
                             <span class="menubar-item-text">9:00 AM</span>
@@ -151,12 +148,6 @@ to do with this project, feel free to fork the repo!
                     </div>
                 </div>
             </div>
-            <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-            <script>
-                $('#close-button').click(() => {
-                    $('#window').hide();
-                })
-            </script>
             <div class="dock">
                 <div class="dock-item">
                     <img width="32" height="32" src="./chrome.svg">
@@ -204,6 +195,7 @@ to do with this project, feel free to fork the repo!
                     <img width="32" height="32" src="./sysmonitor.svg">
                 </div>
                 <div class="vertical-line"></div>
+                <div class="horizontial-line" style="margin: 5px auto; width: 30px;"></div>
                 <div class="dock-item">
                     <img width="32" height="32" src="./trash.svg">
                 </div>
@@ -213,6 +205,13 @@ to do with this project, feel free to fork the repo!
                     </a>
                 </div>
             </div>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+            <script>
+                $('#close-button').click(() => {
+                    $('#window').hide();
+                    $('.dock').show();
+                })
+            </script>
         </div>
     </div>
 </body>
