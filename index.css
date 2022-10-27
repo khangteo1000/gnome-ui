@@ -3,6 +3,22 @@
     src: url('./Cantarell-VF.woff2') format('woff2');
 }
 
+@font-face {
+    font-family: "Cantarell ExtraBold";
+    src: url('./Cantarell-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Menlo";
+    src: url('./Menlo\ Regular\ Nerd\ Font\ Complete.woff2') format('woff2');
+}
+
+pre {
+    font-family: 'Menlo', monospace;
+    font-size: 14px;
+    margin: 0;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -57,14 +73,72 @@ svg {
     display: block;
 }
 
-.terminal-box {
+.terminal-window {
     position: absolute;
     top: 35px;
     left: 13px;
+    background-color: #25273a7c;
+    border: 1px solid #12131d2f;
+    border-radius: 7px;
+}
+
+.terminal-titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 8px;
+    color: #fff;
+    font-size: 14.5px;
+    margin-bottom: 6px;
+}
+
+.terminal-titlebar p {
+    margin: 0;
+}
+
+.terminal-button {
+    background-color: #323643;
+    border-radius: 5px;
+    padding: 5px;
+    align-items: center;
+}
+
+.actions-button {
+    border-radius: 999px;
+    align-items: center;
+    height: 18px;
+    width: 18px;
+    padding: 5px;
+    margin: auto 3px;
+}
+
+.actions-button img {
+    opacity: 0;
+    transition: ease .15s;
+}
+
+.actions-button[style="background-color: #FD7D00;"]:hover img {
+    opacity: 1;
+}
+
+.actions-button[style="background-color: #377CF1;"]:hover img {
+    opacity: 1;
+}
+
+.actions-button[style="background-color: #D31919;"]:hover img {
+    opacity: 1;
+}
+
+.terminal-button svg {
+    display: block;
+}
+
+.terminal-box {
     background: rgba(0, 0, 0, 0.425);
     color: #fff;
     padding: 0 1em;
     border-radius: 3px;
+    margin: 2px;
 }
 
 .cover {
@@ -115,6 +189,46 @@ svg {
     background-color: rgba(255, 255, 255, 0.24);
 }
 
+.menu-item-2 {
+    background-color: #272A34;
+    color: #fff;
+    border-radius: 15px;
+    border: 0.5px solid rgba(255, 255, 255, 0.137);
+    margin: 14px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    transition-duration: .1s;
+    transition-property: all;
+    transform: translateY(20px);
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    z-index: 2;
+    visibility: hidden;
+    font-weight: normal;
+    opacity: 0;
+}
+
+.menu-item-2 div {
+    transition-duration: .1s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menubar-item:last-child:focus .menu-item-2{
+    transform: translateY(27px);
+    visibility: visible;
+    opacity: 1;
+}
+
+.menubar-item:last-child:focus .menu-item-2 div{
+    visibility: visible;
+    opacity: 1;
+}
+
 .menubar-item-text {
     padding-top: 1px;
     text-shadow: 0px 0 20px #000;
@@ -158,25 +272,6 @@ svg {
 
 .dock-item:active {
     background-color: rgba(255, 255, 255, 0.185);
-}
-
-.menu-item-2 {
-    background-color: #272A34;
-    color: #fff;
-    border-radius: 15px;
-    border: 0.5px solid rgba(255, 255, 255, 0.137);
-    margin: 14px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    transition-duration: .1s;
-    transition-property: all;
-    transform: translateY(20px);
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    z-index: 2;
-    opacity: 0;
 }
 
 .menu-items {
@@ -224,11 +319,6 @@ svg {
       box-shadow: -130px 0 0 130px #ff0000;
     }
 
-}
-
-.menu-item-2-active {
-    transform: translateY(27px);
-    opacity: 1;
 }
 
 @media screen and (max-width: 1000px) {
