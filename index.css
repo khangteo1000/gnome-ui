@@ -1,20 +1,15 @@
 @font-face {
-    font-family: "Cantarell";
-    src: url('./Cantarell-VF.woff2') format('woff2');
+    font-family: "JetBrains Mono";
+    src: url('./JetBrainsMonoNL-Regular.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: "Cantarell ExtraBold";
-    src: url('./Cantarell-ExtraBold.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: "Menlo";
-    src: url('./Menlo\ Regular\ Nerd\ Font\ Complete.woff2') format('woff2');
+    font-family: "JetBrains Mono Nerd Font";
+    src: url('./JetBrains Mono Regular Nerd Font Complete Mono.woff2') format('woff2');
 }
 
 pre {
-    font-family: 'Menlo', monospace;
+    font-family: 'JetBrains Mono Nerd Font', monospace;
     font-size: 14px;
     margin: 0;
 }
@@ -25,7 +20,7 @@ pre {
 
 body {
     overflow-x: hidden !important;
-    font-family: 'Cantarell', sans-serif;
+    font-family: 'JetBrains Mono', sans-serif;
     margin: 0;
     padding: 0;
     cursor: url(qogir-cursor_000.png), auto;
@@ -46,7 +41,7 @@ svg {
 .background {
     width: 100%;
     height: 100%;
-    background-image: url(./wallpapersden.com_cool-red-mountains-4k_4000x2250.jpg);
+    background-image: url(./wp9295928.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -175,7 +170,7 @@ svg {
 }
 
 .menu-item-2 {
-    background-color: #272A34;
+    background-color: #12012D;
     color: #fff;
     border-radius: 15px;
     border: 0.5px solid rgba(255, 255, 255, 0.137);
@@ -277,7 +272,7 @@ svg {
 }
 
 .menu-items:hover {
-    background-color: #303340;
+    background-color: #1A0141;
 }
 
 .menu-items span {
@@ -291,7 +286,7 @@ svg {
       height: 4px;
       border-radius: 25px;
       -webkit-appearance: none;
-      background-color: #464953;
+      background-color: #2E1A4D;
       margin: auto 0;
     }
     
@@ -299,7 +294,7 @@ svg {
         border-radius: 25px;
       height: 4px;
       -webkit-appearance: none;
-      color: #ff0000;
+      color: #CF06F8;
       margin-top: -1px;
     }
     
@@ -308,8 +303,8 @@ svg {
       width: 5px;
       -webkit-appearance: none;
       height: 4px;
-      background: #ff0000;
-      box-shadow: -130px 0 0 130px #ff0000;
+      background: #CF06F8;
+      box-shadow: -130px 0 0 130px #CF06F8;
     }
 }
 
